@@ -1,0 +1,766 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import '_header.scss';
+
+li a {
+  text-decoration: none;
+  color: rgb(102, 102, 102);
+}
+
+li a:hover {
+  color: rgb(0, 108, 216);
+}
+
+.header__btn-order-call {
+  display: none;
+  border-radius: 12px;
+  padding: 6px 20px 6px 20px;
+  border: none;
+  background: rgb(11, 69, 127);
+  color: rgb(251, 251, 251);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  text-align: left;
+}
+
+.header__btn-order-call:hover {
+  background-color: rgb(0, 108, 216);
+}
+
+.card__service-name {
+  color: rgb(255, 255, 255);
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.card__service-description {
+  color: rgb(255, 255, 255);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.service-btn {
+  padding: 12px 24px 12px 24px;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  background: transparent;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0.46px;
+  text-align: left;
+  min-width: 172px;
+  text-align: center;
+}
+
+.service-btn:hover {
+  background-color: rgba(251, 251, 251, 0.503);
+}
+
+.img__car {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  margin: 0 8px 0 0;
+}
+
+// .burger-menu-container {
+//   display: none;
+// }
+
+.close-burger.active {
+  display: block;
+  position: absolute;
+  // right: 1rem;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+}
+
+.close-burger-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav.open {
+  display: block;
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.burger-menu.hidden {
+  display: none;
+}
+
+.close-burger {
+  display: none;
+}
+
+.nav {
+  display: none;
+  position: relative;
+}
+
+.header__contact-container.contact-container {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 86px;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(251, 251, 251);
+}
+
+.services__p {
+  color: rgb(62, 62, 62);
+  font-family: Inter;
+  font-weight: 500;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.address,
+.route,
+.schedule {
+  display: flex;
+  color: rgb(102, 102, 102);
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.5px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.burger-menu-container {
+  display: block;
+}
+
+.contact-container__address-route {
+  display: flex;
+  gap: 32px;
+}
+
+@media screen and (max-width: 449px) {
+  body {
+      min-width: 300px;
+  }
+}
+
+@media screen and (min-width: 449px) and (max-width: 599px) {
+  body {
+    min-width: 444px;
+    max-width: 599px;
+  }
+
+  .header__contact-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__navigation-panel {
+    display: block;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    padding: 0px 20px 0px;
+  }
+
+  // .burger-menu-container {
+  //   display: block;
+  // }
+
+  .section__services {
+    padding: 36px 20px 0px;
+  }
+
+  .services__cards-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.card__info {
+  position: relative;
+  border-radius: 12px;
+  background: linear-gradient(
+      10deg,
+      rgb(18 18 18 / 97%) 0.802%,
+      transparent 99.1%
+    ),
+    #3d3d3d;
+  padding: 16px 8px 16px 16px;
+  //   max-width: 335px;
+  min-height: 196px;
+  min-width: 355px;
+}
+
+.card__info:last-child .service-btn {
+  margin-top: 15px;
+}
+
+.service-btn {
+  margin-top: 32px;
+  min-width: 172px;
+}
+
+.cards-container__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 231px;
+}
+
+.card__service-name {
+  font-size: 16px;
+  max-width: 227px;
+}
+
+.card__service-description {
+  max-width: 283px;
+}
+
+@media screen and (min-width: 449px) and (max-width: 599px) {
+  .navigation-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation-panel.align-items {
+    align-items: start;
+    margin-top: 8px;
+  }
+
+  .services__p {
+    max-width: 335px;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 24px;
+  }
+
+  .img__car1 {
+    background-image: url("./../assets/src/xs/services_img1.png");
+    //  width: 100%;
+    //  height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  .header__mobile-nav.burger-mode {
+    display: block;
+  }
+
+  .burger-menu-container {
+    display: block;
+    margin-left: 24px;
+  }
+
+  .close-burger.active {
+    display: block;
+    position: absolute;
+    right: 0px;
+  }
+
+  .section__services {
+    padding: 36px 44px 0px 44px;
+  }
+
+  .card__info {
+    min-width: 550px;
+    min-height: 233px;
+    padding: 16px 8px 16px 32px;
+  }
+
+  .img__car {
+    margin: 0 20px 0 0;
+  }
+
+  .service-btn {
+    margin-top: 50px;
+  }
+
+  .card__info:last-child .service-btn {
+    margin-top: 30px;
+  }
+
+  .navigation-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+    padding: 0px 44px 0px;
+  }
+
+  .navigation-panel.align-items {
+    align-items: start;
+    margin-top: 10px;
+  }
+
+  .burger-menu.hidden {
+    display: none;
+  }
+
+  .close-burger {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+    position: relative;
+  }
+
+  .nav.open {
+    margin-bottom: 10px;
+  }
+
+  .nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .header__mobile-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    // gap: 24px;
+  }
+
+  .header__btn-order-call {
+    display: block;
+    margin: 12px 0px 12px;
+  }
+
+  .services__p {
+    max-width: 603px;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 32px;
+  }
+
+  .card__service-name {
+    font-size: 18px;
+    max-width: 338px;
+  }
+
+  .info__btn-and-img {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .img__car1 {
+    background-image: url("./../assets/src/s/services_img1.png");
+    // width: 149px;
+    // height: 60px;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .section__services {
+    padding: 56px 86px 0px 86px;
+  }
+
+  .header__navigation-panel {
+    display: flex;
+    border-bottom: 1px solid rgb(206, 206, 206);
+    padding: 0px 86px 0px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__btn-order-call {
+    display: block;
+    margin: 12px 0px 12px;
+  }
+
+  .header__mobile-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .header__mobile-nav.burger-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .burger-menu-container {
+    display: block;
+    margin-left: 24px;
+  }
+
+  .nav.open {
+    display: block;
+    text-align: right;
+    margin-bottom: 0px;
+  }
+
+  .header__navigation-panel.align-items {
+    align-items: flex-start;
+    padding: 8px 86px 0px;
+  }
+
+  .header__contact-container.contact-container {
+    display: flex;
+  }
+
+  .address,
+  .route,
+  .schedule {
+    gap: 8px;
+  }
+
+  .cards-container__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .img__car {
+    margin: 0 6px 0 0;
+  }
+
+  .img__car1 {
+    max-width: 195px;
+  }
+
+  .card__info {
+    // min-width: 410px;
+    min-height: 233px;
+    padding: 32px 6px 32px 32px;
+  }
+
+  .service-btn {
+    // max-width: 142px;
+    margin-top: 32px;
+    height: 45px;
+  }
+
+  .services__p {
+    max-width: 603px;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 32px;
+  }
+
+  .card__service-name {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1199px) and (max-width: 1750px) {
+  .header__navigation-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 150px;
+    border-bottom: 1px solid rgb(206, 206, 206);
+  }
+
+  .header__btn-order-call {
+    display: block;
+    margin: 12px 0px 12px;
+  }
+
+  .header__mobile-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .header__mobile-nav.burger-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .burger-menu-container {
+    display: block;
+    margin-left: 24px;
+  }
+
+  .nav.open {
+    display: block;
+    text-align: right;
+    margin-bottom: 0px;
+  }
+
+  .header__navigation-panel.align-items {
+    align-items: flex-start;
+    padding: 10px 150px 10px;
+  }
+
+
+  .section__services {
+    padding: 84px 150px;
+  }
+
+  .header__contact-container.contact-container {
+    display: flex;
+    padding: 10px 150px;
+  }
+
+  .cards-container__card {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+      "card__info1 card__info1"
+      "card__info2 card__info3"
+      "card__info4 card__info4";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .card__info1 {
+    grid-area: card__info1;
+  }
+
+  .card__info2 {
+    grid-area: card__info2;
+  }
+
+  .card__info3 {
+    grid-area: card__info3;
+  }
+
+  .card__info4 {
+    grid-area: card__info4;
+
+    .img-car4 {
+      max-width: 600px;
+      max-height: 280px;
+    }
+  }
+
+  .img__car {
+    margin: 0 35px 0 0;
+}
+
+  .img-car3 {
+    transform: translateY(
+      50%
+    ); 
+  }
+
+  .img-car2 {
+    transform: translateX(28%);
+    max-width: 231px;
+    max-height: 130px;
+  }
+
+  .img-car1 {
+    max-width: 400px;
+    max-height: 192px;
+  }
+
+  .card__info {
+    overflow: hidden;
+    max-height: 300px;
+    padding: 32px 54px 12px 32px;
+  }
+
+  .card__service-name {
+    font-size: 18px;
+    max-width: 250px;
+    margin-bottom: 12px;
+  }
+
+  .card__info:last-child .service-btn {
+    margin: 32px 0px 50px;
+  }
+
+  .services__p{
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+//   .header__btn-order-call {
+//     display: block;
+//     margin: 12px 0px 12px;
+// }
+
+// .header__mobile-nav {
+//   display: flex;
+//     flex-direction: row-reverse;
+//     align-items: center;
+// }
+
+// .header__mobile-nav.burger-mode {
+//   display: flex;
+//   flex-direction: column;
+//     align-items: center;
+// }
+
+
+// .header__btn-order-call{
+//   margin-right: 30px;
+// }
+
+
+}
+
+@media screen and (min-width: 1750px) and (max-width: 1920px) {
+  .header__mobile-nav .close-burger-container {
+    display: none;
+  }
+
+  .header__mobile-nav {
+    display: flex;
+    gap: 56px;
+  }
+
+  .burger-menu-container {
+    display: none;
+  }
+
+  .close-burger-container {
+    display: none;
+    justify-content: flex-end;
+  }
+
+  .header__navigation-panel {
+    //   padding: 12px 310px 12px 310px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 22px 310px 22px;
+    border-bottom: 1px solid rgb(206, 206, 206);
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 32px;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  .header__btn-order-call {
+    display: block;
+  }
+
+  .header__contact-container.contact-container {
+    display: flex;
+    padding: 13px 310px;
+  }
+
+  .section__services {
+    padding: 56px 310px 0px 310px;
+  }
+
+  .cards-container__card {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+      "card__info1 card__info2 card__info4"
+      "card__info1 card__info3 card__info4";
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card__info1 {
+    grid-area: card__info1;
+  }
+
+  .card__info2 {
+    grid-area: card__info2;
+  }
+
+  .card__info3 {
+    grid-area: card__info3;
+  }
+
+  .card__info4 {
+    grid-area: card__info4;
+
+    .img-car4 {
+      max-width: 600px;
+      max-height: 280px;
+    }
+  }
+
+  .img-car3 {
+    transform: translateY(
+      50%
+    ); /* сдвигает изображение на 50% вниз, так что половина будет скрыта */
+    max-width: 125px;
+    max-height: 253px;
+  }
+
+  .img-car2 {
+    transform: translateX(28%);
+    max-width: 231px;
+    max-height: 130px;
+  }
+
+  .img-car1 {
+    max-width: 400px;
+    max-height: 192px;
+  }
+
+  .card__info {
+    overflow: hidden;
+    min-width: 424px;
+    min-height: 250px;
+    padding: 32px 54px 12px 32px;
+  }
+
+  .card__service-name {
+    font-size: 18px;
+    max-width: 250px;
+    margin-bottom: 12px;
+  }
+
+  .card__info:last-child .service-btn {
+    margin-top: 32px;
+  }
+
+  .services__p {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 32px;
+  }
+}
+
+.address,
+.route,
+.schedule {
+  gap: 7px;
+}
