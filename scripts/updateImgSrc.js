@@ -1,3 +1,5 @@
+const updateImgSrc = () => {
+
 const imgCarElements = document.querySelectorAll(".img__car");
 
 imgCarElements.forEach((element, index) => {
@@ -27,5 +29,7 @@ imgCarElements.forEach((element, index) => {
     imgElement.classList.add(`img-car${index + 1}`);
     element.appendChild(imgElement);
   });
+}
 
   export default updateImgSrc
+

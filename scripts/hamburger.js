@@ -1,19 +1,28 @@
 import constants from "./constants.js";
 
-constants.hamburgerPic.addEventListener("click", function () {
-  constants.nav.classList.add("open");
-  constants.hamburgerPic.classList.add("hidden");
-  constants.closeMenuButton.classList.add("active");
-  constants.navigationPanel.classList.add("align-items");
-  constants.headerMobileNav.classList.add("burger-mode");
-});
 
-constants.closeMenuButton.addEventListener("click", function () {
+export const handleHamburgerClick = () => {
+  constants.nav.classList.toggle("open");
+  constants.hamburgerPic.classList.toggle("hidden");
+  constants.closeMenuButton.classList.toggle("active");
+  constants.navigationPanel.classList.toggle("align-items");
+  constants.headerMobileNav.classList.toggle("burger-mode");
+}
+
+export const handleMenuClose = () => {
   constants.nav.classList.remove("open");
   constants.hamburgerPic.classList.remove("hidden");
   constants.closeMenuButton.classList.remove("active");
   constants.navigationPanel.classList.remove("align-items");
   constants.headerMobileNav.classList.remove("burger-mode");
-});
+}
 
-export default hamburger
+
+constants.hamburgerPic.addEventListener("click", handleHamburgerClick)
+constants.closeMenuButton.addEventListener("click", handleMenuClose)
+
+
+
+
+
+

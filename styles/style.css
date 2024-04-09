@@ -17,45 +17,19 @@ button {
   cursor: pointer;
 }
 
-.header__btn-order-call {
+.nav {
   display: none;
-  border-radius: 12px;
-  padding: 6px 20px 6px 20px;
-  border: none;
-  background: rgb(11, 69, 127);
-  color: rgb(251, 251, 251);
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.4px;
-  text-align: left;
+  position: relative;
 }
-
-.header__btn-order-call:hover {
-  background-color: rgb(0, 108, 216);
-}
-
-.close-burger.active {
-  display: block;
-  position: absolute;
-  cursor: pointer;
-}
-
 .nav ul {
   list-style: none;
   padding: 0;
   margin-top: 2rem;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0px;
-}
-
-.close-burger-container {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .nav.open {
@@ -64,17 +38,52 @@ button {
   margin-bottom: 8px;
 }
 
-.burger-menu.hidden {
+.header__btn-order-call {
   display: none;
+  border-radius: 12px;
+  padding: 6px 20px 6px 20px;
+  margin: 12px 0px 12px;
+  border: none;
+  background: rgb(11, 69, 127);
+  color: rgb(251, 251, 251);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
+.header__btn-order-call:hover {
+  background-color: rgb(0, 108, 216);
+}
+
+.close-burger-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .close-burger {
   display: none;
 }
 
-.nav {
+.close-burger.active {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.burger-menu-container {
+  display: flex;
+  cursor: pointer;
+}
+
+.burger-menu.hidden {
   display: none;
-  position: relative;
+}
+
+.header__navigation-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__contact-container.contact-container {
@@ -92,18 +101,12 @@ button {
 .schedule {
   display: flex;
   color: rgb(102, 102, 102);
-  font-family: Inter;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.5px;
   letter-spacing: 0px;
-  text-align: left;
-  gap: 8px;
-}
-
-.burger-menu-container {
-  display: block;
-  cursor: pointer;
 }
 
 .contact-container__address-route {
@@ -111,36 +114,32 @@ button {
   gap: 32px;
 }
 
+.header__navigation-panel.align-items {
+  align-items: flex-start;
+  max-height: none;
+}
+
 @media screen and (min-width: 449px) and (max-width: 599px) {
-  body {
-    min-width: 444px;
-    max-width: 599px;
-  }
   .header__contact-container {
     display: flex;
-    justify-content: space-between;
   }
   .header__navigation-panel {
-    display: block;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
-    padding: 0px 20px 0px;
-  }
-  .navigation-panel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 18px 20px 16px;
+    max-height: 60px;
   }
   .navigation-panel.align-items {
-    align-items: start;
     margin-top: 8px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 899px) {
   .header__mobile-nav.burger-mode {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .burger-menu-container {
-    display: block;
+    display: flex;
     margin-left: 24px;
   }
   .close-burger.active {
@@ -149,14 +148,11 @@ button {
     right: 0px;
   }
   .navigation-panel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
-    padding: 0px 44px 0px;
+    padding: 12px 44px;
+    max-height: 64px;
   }
   .navigation-panel.align-items {
-    align-items: start;
     margin-top: 10px;
   }
   .burger-menu.hidden {
@@ -172,11 +168,6 @@ button {
   .nav.open {
     margin-bottom: 10px;
   }
-  .nav ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 2rem;
-  }
   .header__mobile-nav {
     display: flex;
     flex-direction: row-reverse;
@@ -184,20 +175,15 @@ button {
   }
   .header__btn-order-call {
     display: block;
-    margin: 12px 0px 12px;
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1199px) {
   .header__navigation-panel {
-    display: flex;
     border-bottom: 1px solid rgb(206, 206, 206);
     padding: 0px 86px 0px;
-    align-items: center;
-    justify-content: space-between;
   }
   .header__btn-order-call {
     display: block;
-    margin: 12px 0px 12px;
   }
   .header__mobile-nav {
     display: flex;
@@ -210,7 +196,7 @@ button {
     align-items: center;
   }
   .burger-menu-container {
-    display: block;
+    display: flex;
     margin-left: 24px;
   }
   .nav.open {
@@ -218,9 +204,9 @@ button {
     text-align: right;
     margin-bottom: 0px;
   }
-  .header__navigation-panel.align-items {
-    align-items: flex-start;
-    padding: 8px 86px 0px;
+  .header__navigation-panel {
+    padding: 12px 86px;
+    max-height: 64px;
   }
   .header__contact-container.contact-container {
     display: flex;
@@ -228,15 +214,12 @@ button {
 }
 @media screen and (min-width: 1199px) and (max-width: 1750px) {
   .header__navigation-panel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 150px;
     border-bottom: 1px solid rgb(206, 206, 206);
+    padding: 18px 150px;
+    max-height: 64px;
   }
   .header__btn-order-call {
     display: block;
-    margin: 12px 0px 12px;
   }
   .header__mobile-nav {
     display: flex;
@@ -249,7 +232,7 @@ button {
     align-items: center;
   }
   .burger-menu-container {
-    display: block;
+    display: flex;
     margin-left: 24px;
   }
   .nav.open {
@@ -257,9 +240,9 @@ button {
     text-align: right;
     margin-bottom: 0px;
   }
-  .header__navigation-panel.align-items {
-    align-items: flex-start;
-    padding: 10px 150px 10px;
+  .header__navigation-panel {
+    padding: 18px 150px;
+    max-height: 64px;
   }
   .header__contact-container.contact-container {
     display: flex;
@@ -282,11 +265,9 @@ button {
     justify-content: flex-end;
   }
   .header__navigation-panel {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    padding: 22px 310px 22px;
     border-bottom: 1px solid rgb(206, 206, 206);
+    padding: 22px 310px;
+    max-height: 64px;
   }
   .nav {
     display: flex;
@@ -316,24 +297,14 @@ button {
   background: linear-gradient(10deg, rgba(18, 18, 18, 0.97) 0.802%, transparent 99.1%), #3d3d3d;
 }
 
-.card__service-name {
-  color: rgb(255, 255, 255);
-  font-family: Inter;
-  font-weight: 500;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
-  margin-bottom: 8px;
-}
-
 .card__service-description {
   color: rgb(255, 255, 255);
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
+  font-style: normal;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0px;
-  text-align: left;
 }
 
 .service-btn {
@@ -342,14 +313,13 @@ button {
   color: rgb(255, 255, 255);
   border-radius: 8px;
   background: transparent;
-  font-family: Inter;
+  min-width: 172px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 17px;
   letter-spacing: 0.46px;
-  text-align: left;
-  min-width: 172px;
-  text-align: center;
 }
 
 .service-btn:hover {
@@ -362,15 +332,6 @@ button {
   right: 0;
   height: auto;
   margin: 0 8px 0 0;
-}
-
-.services__p {
-  color: rgb(62, 62, 62);
-  font-family: Inter;
-  margin-bottom: 24px;
-  font-weight: 500;
-  letter-spacing: 0px;
-  text-align: left;
 }
 
 .contact-container__address-route {
@@ -387,9 +348,15 @@ button {
     flex-direction: column;
   }
   .services__p {
-    max-width: 335px;
+    max-width: 435px;
+    margin-bottom: 24px;
+    color: rgb(62, 62, 62);
+    font-family: "Inter", sans-serif;
     font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
     line-height: 19px;
+    letter-spacing: 0px;
   }
   .card__info {
     padding: 16px 8px 16px 16px;
@@ -399,6 +366,18 @@ button {
 }
 .card__info:last-child .service-btn {
   margin-top: 15px;
+}
+
+.card__service-name {
+  color: rgb(255, 255, 255);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0px;
+  margin-bottom: 8px;
+  max-width: 227px;
 }
 
 .service-btn {
@@ -413,19 +392,8 @@ button {
   margin-bottom: 231px;
 }
 
-.card__service-name {
-  font-size: 16px;
-  max-width: 227px;
-}
-
 .card__service-description {
   max-width: 283px;
-}
-
-.img__car1 {
-  background-image: url("./../assets/src/xs/services_img1.png");
-  background-size: cover;
-  background-position: center;
 }
 
 @media screen and (min-width: 600px) and (max-width: 899px) {
@@ -446,15 +414,27 @@ button {
   .card__info:last-child .service-btn {
     margin-top: 30px;
   }
+  .card__service-name {
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0px;
+    margin-bottom: 12px;
+    max-width: 338px;
+  }
   .services__p {
     max-width: 603px;
-    font-size: 24px;
-    line-height: 29px;
     margin-bottom: 32px;
-  }
-  .card__service-name {
-    font-size: 18px;
-    max-width: 338px;
+    color: rgb(62, 62, 62);
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0px;
   }
   .info__btn-and-img {
     display: flex;
@@ -462,11 +442,6 @@ button {
     align-content: space-around;
     align-items: flex-end;
     width: 100%;
-  }
-  .img__car1 {
-    background-image: url("./../assets/src/s/services_img1.png");
-    background-size: cover;
-    background-position: center;
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1199px) {
@@ -494,11 +469,24 @@ button {
   }
   .services__p {
     max-width: 603px;
-    font-size: 24px;
-    line-height: 29px;
     margin-bottom: 32px;
+    color: rgb(62, 62, 62);
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0px;
   }
   .card__service-name {
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0px;
+    margin-bottom: 12px;
     margin-bottom: 12px;
   }
 }
@@ -550,7 +538,14 @@ button {
     padding: 32px 54px 12px 32px;
   }
   .card__service-name {
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
     font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0px;
+    margin-bottom: 12px;
     max-width: 250px;
     margin-bottom: 12px;
   }
@@ -558,9 +553,15 @@ button {
     margin: 32px 0px 50px;
   }
   .services__p {
-    margin-bottom: 30px;
+    max-width: none;
+    margin-bottom: 32px;
+    color: rgb(62, 62, 62);
+    font-family: "Inter", sans-serif;
     font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
     line-height: 29px;
+    letter-spacing: 0px;
   }
 }
 @media screen and (min-width: 1750px) and (max-width: 1920px) {
@@ -611,7 +612,14 @@ button {
     padding: 32px 54px 12px 32px;
   }
   .card__service-name {
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
     font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0px;
+    margin-bottom: 12px;
     max-width: 250px;
     margin-bottom: 12px;
   }
@@ -619,8 +627,14 @@ button {
     margin-top: 32px;
   }
   .services__p {
-    font-size: 24px;
-    line-height: 29px;
+    max-width: none;
     margin-bottom: 32px;
+    color: rgb(62, 62, 62);
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0px;
   }
 }/*# sourceMappingURL=style.css.map */

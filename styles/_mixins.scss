@@ -1,0 +1,99 @@
+//миксин текста над карточками
+@mixin p__services-xs($p_max-width, $p_margin-bottom) {
+  max-width: $p_max-width;
+  margin-bottom: $p_margin-bottom;
+  color: rgb(62, 62, 62);
+  font-family: $mainFont;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0px;
+}
+
+@mixin p__services-s-m-l($p_max-width, $p_margin-bottom) {
+  max-width: $p_max-width;
+  margin-bottom: $p_margin-bottom;
+  color: rgb(62, 62, 62);
+  font-family: $mainFont;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0px;
+}
+
+//миксины для стилей текста
+@mixin text-styles(
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+  $letter-spacing
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+//миксины для отступов в header
+@mixin header_pad-xs {
+  padding: 18px 20px 16px;
+  max-height: 60px;
+}
+
+@mixin header_pad-s {
+  padding: 12px 44px;
+  max-height: 64px;
+}
+
+@mixin header_pad-m {
+  padding: 12px 86px;
+  max-height: 64px;
+}
+
+@mixin header_pad-average{
+    padding: 18px 150px;
+    max-height: 64px;
+  }
+
+@mixin header_pad-l {
+  padding: 22px 310px;
+  max-height: 64px;
+}
+
+//миксины заголовка services
+@mixin title_services-xs {
+  color: $primaryColor;
+  font-family: $mainFont;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0px;
+  margin-bottom: 8px;
+}
+
+@mixin title_services-s-m-l {
+  color: $primaryColor;
+  font-family: $mainFont;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0px;
+  margin-bottom: 12px;
+}
+
+//миксин для description
+@mixin description_services {
+  color: $primaryColor;
+  font-family: $mainFont;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+}

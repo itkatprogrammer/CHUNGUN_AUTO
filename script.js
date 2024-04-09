@@ -30,8 +30,12 @@
 
 
 import { updateButtonNames } from './scripts/updateButtonNames.js';
-import hamburger from './scripts/hamburger.js';
+import { handleHamburgerClick, handleMenuClose } from './scripts/hamburger.js';
 import updateImgSrc  from './scripts/updateImgSrc.js'
+
+handleHamburgerClick();
+updateImgSrc();
+
 
 
 
